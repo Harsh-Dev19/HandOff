@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Handoff</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <h2>Handoff</h2>
+
+  <input
+    type="text"
+    id="project"
+    placeholder="Project Name"
+  >
+
+  <textarea
+    id="goal"
+    placeholder="Current Goal"
+  ></textarea>
+
+  <textarea
+    id="completed"
+    placeholder="Completed Work"
+  ></textarea>
+
+  <textarea
+    id="issue"
+    placeholder="Current Issue"
+  ></textarea>
+
+  <textarea
+    id="next"
+    placeholder="Next Step"
+  ></textarea>
+
+  <button id="generateBtn">
+    Generate Prompt
+  </button>
+
+  <textarea
+    id="output"
+    readonly
+    placeholder="Generated prompt will appear here"
+  ></textarea>
+
+  <button id="copyBtn">
+    Copy Prompt
+  </button>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
