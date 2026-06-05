@@ -36,10 +36,17 @@ Please continue helping with this project from the current state.
 
 copyBtn.addEventListener("click", () => {
 
-  const output = document.getElementById("output");
+    const output =
+        document.getElementById("output");
 
-  navigator.clipboard.writeText(output.value);
+    navigator.clipboard.writeText(
+        output.value
+    );
 
-  alert("Prompt copied!");
+    copyBtn.textContent = "✓ Copied";
+
+    setTimeout(() => {
+        copyBtn.textContent = "Copy Prompt";
+    }, 2000);
 
 });
