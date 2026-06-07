@@ -99,3 +99,35 @@ button {
 #copyBtn:hover {
     transform: translateY(-1px);
 }
+
+select {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.field-label {
+    display: block;
+
+    margin-top: 12px;
+    margin-bottom: 6px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}

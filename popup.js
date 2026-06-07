@@ -1,52 +1,72 @@
 const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 generateBtn.addEventListener("click", () => {
 
-  const project = document.getElementById("project").value;
-  const goal = document.getElementById("goal").value;
-  const completed = document.getElementById("completed").value;
-  const issue = document.getElementById("issue").value;
-  const next = document.getElementById("next").value;
+    const project = document.getElementById("project").value;
+    const goal = document.getElementById("goal").value;
+    const completed = document.getElementById("completed").value;
+    const issue = document.getElementById("issue").value;
+    const next = document.getElementById("next").value;
 
-  const prompt = `
-You are taking over an existing project.
+    const prompt = `PROJECT OVERVIEW
 
-Project Name:
+Name:
 ${project}
 
-Current Goal:
+CURRENT OBJECTIVE
+
 ${goal}
 
-Completed Work:
+COMPLETED WORK
+
 ${completed}
 
-Current Issue:
+CURRENT CHALLENGE
+
 ${issue}
 
-Next Step:
+NEXT ACTION
+
 ${next}
 
-Please continue helping with this project from the current state.
+INSTRUCTIONS FOR THE AI
+
+Continue from the current project state.
+
+Assume previous decisions remain valid.
+
+Do not restart the project from scratch.
+
+Focus on helping with the next action and current challenge.
 `;
 
-  document.getElementById("output").value = prompt;
+    document.getElementById("output").value = prompt;
 
 });
 
 copyBtn.addEventListener("click", () => {
 
-    const output =
-        document.getElementById("output");
+    const output = document.getElementById("output");
 
-    navigator.clipboard.writeText(
-        output.value
-    );
+    navigator.clipboard.writeText(output.value);
 
     copyBtn.textContent = "✓ Copied";
 
     setTimeout(() => {
         copyBtn.textContent = "Copy Prompt";
     }, 2000);
+
+});
+
+clearBtn.addEventListener("click", () => {
+
+    document.getElementById("project").value = "";
+    document.getElementById("goal").value = "";
+    document.getElementById("completed").value = "";
+    document.getElementById("issue").value = "";
+    document.getElementById("next").value = "";
+    document.getElementById("output").value = "";
 
 });

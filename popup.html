@@ -5,13 +5,26 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div class="header">
+
+<div class="header">
     <img src="assets/icon.jpg" alt="Handoff Logo" class="logo">
 
     <h1>Handoff</h1>
 
     <p>Pick up where you left off.</p>
 </div>
+
+    <label for="targetAI" class="field-label">
+        Target AI
+    </label>
+
+<select id="targetAI">
+    <option>ChatGPT</option>
+    <option>Claude</option>
+    <option>Gemini</option>
+    <option>DeepSeek</option>
+    <option>Grok</option>
+</select>
 
 <input
     type="text"
@@ -38,6 +51,10 @@
     Generate Prompt
 </button>
 
+<button id="clearBtn">
+    Clear All
+</button>
+
 <textarea
     id="output"
     readonly
@@ -46,7 +63,8 @@
 <button id="copyBtn">
     Copy Prompt
 </button>
-  <script src="popup.js"></script>
+
+<script src="popup.js"></script>
 
 </body>
 </html>
